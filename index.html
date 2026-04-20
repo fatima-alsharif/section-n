@@ -23,169 +23,127 @@
             box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
         }
 
-        .header {
+        h1 {
+            color: #f06d06;
             text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .header h1 {
-            color: #ff8fa3; /* وردي كيوت */
-            font-size: 2rem;
-            margin: 0;
-            display: inline-block;
-            position: relative;
-        }
-
-        .header h1::after {
-            content: '✨';
-            position: absolute;
-            right: -35px;
-            top: 5px;
-            font-size: 1.2rem;
-        }
-
-        .schedule-item {
-            display: flex;
-            align-items: center;
-            background: #fff;
-            margin-bottom: 15px;
-            padding: 15px;
-            border-radius: 20px;
-            border: 1px solid #ffe4e8;
-            transition: transform 0.2s;
-        }
-
-        .schedule-item:hover {
-            transform: scale(1.02);
-            border-color: #ffb3c1;
-        }
-
-        .date-box {
-            min-width: 100px;
-            text-align: center;
-            background: #ffe5ec;
-            color: #ff4d6d;
-            padding: 10px;
-            border-radius: 15px;
-            font-weight: bold;
-            font-size: 0.9rem;
-            margin-left: 20px;
-        }
-
-        .details {
-            flex-grow: 1;
-        }
-
-        .task-title {
-            color: #555;
-            font-size: 1rem;
-            font-weight: 500;
             margin-bottom: 5px;
         }
 
-        .subject-tag {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 10px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            text-transform: uppercase;
+        .subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 30px;
+            font-size: 0.9em;
         }
 
-        /* ألوان المواد الكيوت */
-        .eng-tag { background-color: #e0d7ff; color: #6c5ce7; } /* لافندر للإنجليزي */
-        .math-tag { background-color: #ffedda; color: #e67e22; } /* مشمشي للرياضيات */
+        .item {
+            display: flex;
+            align-items: center;
+            background: #fffafa;
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            border-radius: 20px;
+            border: 1px solid #ffe4e1;
+            transition: transform 0.2s;
+        }
 
-        .status-dot {
-            width: 10px;
-            height: 10px;
+        .item:hover {
+            transform: scale(1.02);
+        }
+
+        .date-box {
+            background: #f06d06;
+            color: white;
+            min-width: 80px;
+            padding: 10px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 0.85em;
+            line-height: 1.4;
+        }
+
+        .content {
+            flex-grow: 1;
+            margin-right: 15px;
+        }
+
+        .title {
+            font-weight: bold;
+            color: #444;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .tags {
+            display: flex;
+            gap: 5px;
+        }
+
+        .tag {
+            font-size: 0.7em;
+            padding: 2px 10px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .tag.programming { background: #e0f7fa; color: #00838f; }
+        .tag.english { background: #e8eaf6; color: #3f51b5; }
+        .tag.math { background: #fff3e0; color: #ef6c00; }
+
+        .dot {
+            height: 8px;
+            width: 8px;
+            background-color: #f06d06;
             border-radius: 50%;
-            margin-right: 10px;
-            background-color: #ffb3c1;
+            margin-left: 15px;
+            opacity: 0.6;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="header">
-        <h1>شعبة N</h1>
-        <p style="color: #a0a0a0; font-size: 0.9rem;">قائمة المهام والاختبارات القادمة 🎀</p>
-    </div>
+    <h1>شعبة N ✨</h1>
+    <p class="subtitle">قائمة المهام والاختبارات القادمة 🎀</p>
 
-    <div class="schedule-item">
-        <div class="date-box">٢٣ ابريل<br>الخميس</div>
-        <div class="details">
-            <div class="task-title">واجب يونيت ٨ و يونيت ٩</div>
-            <span class="subject-tag eng-tag">English</span>
-        </div>
-        <div class="status-dot"></div>
-    </div>
-
-    <div class="schedule-item">
-        <div class="date-box">٢٧ ابريل<br>الاثنين</div>
-        <div class="details">
-            <div class="task-title">كويز ٤ (آخر المحاضرة) - يونيت ٧ و ٨</div>
-            <span class="subject-tag eng-tag">English</span>
-        </div>
-        <div class="status-dot"></div>
-    </div>
-
-    <div class="schedule-item">
-        <div class="date-box">٢٩ ابريل<br>الاربعاء</div>
-        <div class="details">
-            <div class="task-title">كويز ٥ (آخر المحاضرة) - يونيت ٩ و ١٠</div>
-            <span class="subject-tag eng-tag">English</span>
-        </div>
-        <div class="status-dot"></div>
-    </div>
-
-    <div class="schedule-item">
-        <div class="date-box">٣٠ ابريل<br>الخميس</div>
-        <div class="details">
-            <div class="task-title">واجب يونيت ١٠ + واجب الرياضيات (آخر يوم)</div>
-            <div style="margin-top: 5px;">
-                <span class="subject-tag eng-tag">English</span>
-                <span class="subject-tag math-tag">Math</span>
+    <div class="item">
+        <div class="dot"></div>
+        <div class="content">
+            <span class="title">كويز 2 (البرمجة)</span>
+            <div class="tags">
+                <span class="tag programming">PROGRAMMING</span>
             </div>
         </div>
-        <div class="status-dot"></div>
+        <div class="date-box">
+            23 أبريل<br>الخميس
+        </div>
     </div>
 
-    <div class="schedule-item">
-        <div class="date-box">٣ مايو<br>الاحد</div>
-        <div class="details">
-            <div class="task-title">اختبار التعبير + كويز ٦ (يونيت ١١ و ١٢)</div>
-            <span class="subject-tag eng-tag">English</span>
+    <div class="item">
+        <div class="dot"></div>
+        <div class="content">
+            <span class="title">واجب يونيت 8 و يونيت 9</span>
+            <div class="tags">
+                <span class="tag english">ENGLISH</span>
+            </div>
         </div>
-        <div class="status-dot"></div>
+        <div class="date-box">
+            23 أبريل<br>الخميس
+        </div>
     </div>
 
-    <div class="schedule-item">
-        <div class="date-box">٤ مايو<br>الاثنين</div>
-        <div class="details">
-            <div class="task-title">اختبار التحدث</div>
-            <span class="subject-tag eng-tag">English</span>
+    <div class="item">
+        <div class="dot"></div>
+        <div class="content">
+            <span class="title">كويز 4 (آخر المحاضرة) - يونيت 7 و 8</span>
+            <div class="tags">
+                <span class="tag english">ENGLISH</span>
+            </div>
         </div>
-        <div class="status-dot"></div>
-    </div>
-
-    <div class="schedule-item">
-        <div class="date-box">٥ مايو<br>الثلاثاء</div>
-        <div class="details">
-            <div class="task-title">الميد الثاني (٥:٠٠ - ٧:٠٠ مساءً)</div>
-            <span class="subject-tag eng-tag">English</span>
+        <div class="date-box">
+            27 أبريل<br>الاثنين
         </div>
-        <div class="status-dot"></div>
-    </div>
-
-    <div class="schedule-item" style="border-color: #ffcad4;">
-        <div class="date-box" style="background-color: #ffcad4;">٧ مايو<br>الخميس</div>
-        <div class="details">
-            <div class="task-title">ميد الرياضيات الثاني</div>
-            <span class="subject-tag math-tag">Math</span>
-        </div>
-        <div class="status-dot"></div>
     </div>
 
 </div>
