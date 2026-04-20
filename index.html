@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #fff9f9; /* خلفية وردية خفيفة جداً */
+            background-color: #fff9f9;
             display: flex;
             justify-content: center;
             padding: 20px;
@@ -54,7 +54,7 @@
         .date-box {
             background: #f06d06;
             color: white;
-            min-width: 80px;
+            min-width: 90px;
             padding: 10px;
             border-radius: 15px;
             text-align: center;
@@ -72,6 +72,7 @@
             color: #444;
             display: block;
             margin-bottom: 5px;
+            font-size: 1.1em;
         }
 
         .tags {
@@ -81,23 +82,23 @@
 
         .tag {
             font-size: 0.7em;
-            padding: 2px 10px;
+            padding: 4px 12px;
             border-radius: 10px;
             text-transform: uppercase;
             font-weight: bold;
         }
 
-        .tag.programming { background: #e0f7fa; color: #00838f; }
+        /* ألوان المواد */
+        .tag.programming { background: #e0f2f1; color: #00796b; }
         .tag.english { background: #e8eaf6; color: #3f51b5; }
         .tag.math { background: #fff3e0; color: #ef6c00; }
 
         .dot {
-            height: 8px;
-            width: 8px;
+            height: 10px;
+            width: 10px;
             background-color: #f06d06;
             border-radius: 50%;
             margin-left: 15px;
-            opacity: 0.6;
         }
     </style>
 </head>
@@ -105,17 +106,17 @@
 
 <div class="container">
     <h1>شعبة N ✨</h1>
-    <p class="subtitle">قائمة المهام والاختبارات القادمة 🎀</p>
+    <p class="subtitle">قائمة المواعيد والاختبارات المحدثة 🎀</p>
 
-    <div class="item">
-        <div class="dot"></div>
+    <div class="item" style="border: 2px solid #b2dfdb;">
+        <div class="dot" style="background-color: #00796b;"></div>
         <div class="content">
-            <span class="title">كويز 2 (البرمجة)</span>
+            <span class="title">كويز 2 (البرمجة) 💻</span>
             <div class="tags">
-                <span class="tag programming">PROGRAMMING</span>
+                <span class="tag programming">البرمجة - PROGRAMMING</span>
             </div>
         </div>
-        <div class="date-box">
+        <div class="date-box" style="background: #00796b;">
             23 أبريل<br>الخميس
         </div>
     </div>
@@ -123,7 +124,7 @@
     <div class="item">
         <div class="dot"></div>
         <div class="content">
-            <span class="title">واجب يونيت 8 و يونيت 9</span>
+            <span class="title">واجب يونيت 8 و يونيت 9 📚</span>
             <div class="tags">
                 <span class="tag english">ENGLISH</span>
             </div>
