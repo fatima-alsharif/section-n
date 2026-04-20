@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>جدول شعبة N</title>
+    <title>جدول مواعيد شعبة N</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -16,24 +16,25 @@
 
         .container {
             width: 100%;
-            max-width: 700px;
+            max-width: 750px;
             background: white;
             padding: 30px;
             border-radius: 30px;
-            box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
+            box-shadow: 0 10px 40px rgba(255, 182, 193, 0.15);
         }
 
         h1 {
             color: #f06d06;
             text-align: center;
             margin-bottom: 5px;
+            font-size: 1.8em;
         }
 
         .subtitle {
             text-align: center;
-            color: #888;
+            color: #999;
             margin-bottom: 30px;
-            font-size: 0.9em;
+            font-size: 0.95em;
         }
 
         .item {
@@ -52,14 +53,14 @@
         }
 
         .date-box {
-            background: #f06d06;
             color: white;
-            min-width: 90px;
-            padding: 10px;
-            border-radius: 15px;
+            min-width: 100px;
+            padding: 12px;
+            border-radius: 18px;
             text-align: center;
             font-size: 0.85em;
             line-height: 1.4;
+            font-weight: bold;
         }
 
         .content {
@@ -69,34 +70,36 @@
 
         .title {
             font-weight: bold;
-            color: #444;
+            color: #333;
             display: block;
-            margin-bottom: 5px;
-            font-size: 1.1em;
+            margin-bottom: 6px;
+            font-size: 1.05em;
         }
 
         .tags {
             display: flex;
-            gap: 5px;
+            gap: 8px;
         }
 
         .tag {
             font-size: 0.7em;
             padding: 4px 12px;
-            border-radius: 10px;
-            text-transform: uppercase;
+            border-radius: 12px;
             font-weight: bold;
         }
 
         /* ألوان المواد */
-        .tag.programming { background: #e0f2f1; color: #00796b; }
-        .tag.english { background: #e8eaf6; color: #3f51b5; }
-        .tag.math { background: #fff3e0; color: #ef6c00; }
+        .bg-english { background: #f06d06; } /* برتقالي للمواعيد العامة */
+        .bg-math { background: #ef6c00; }    /* برتقالي داكن للرياضيات */
+        .bg-prog { background: #6a1b9a; }    /* أرجواني للبرمجة */
+
+        .tag-english { background: #e8eaf6; color: #3f51b5; }
+        .tag-math { background: #fff3e0; color: #ef6c00; }
+        .tag-prog { background: #f3e5f5; color: #7b1fa2; }
 
         .dot {
             height: 10px;
             width: 10px;
-            background-color: #f06d06;
             border-radius: 50%;
             margin-left: 15px;
         }
@@ -106,45 +109,96 @@
 
 <div class="container">
     <h1>شعبة N ✨</h1>
-    <p class="subtitle">قائمة المواعيد والاختبارات المحدثة 🎀</p>
-
-    <div class="item" style="border: 2px solid #b2dfdb;">
-        <div class="dot" style="background-color: #00796b;"></div>
-        <div class="content">
-            <span class="title">كويز 2 (البرمجة) 💻</span>
-            <div class="tags">
-                <span class="tag programming">البرمجة - PROGRAMMING</span>
-            </div>
-        </div>
-        <div class="date-box" style="background: #00796b;">
-            23 أبريل<br>الخميس
-        </div>
-    </div>
+    <p class="subtitle">جدول المواعيد والاختبارات القادمة 🎀</p>
 
     <div class="item">
-        <div class="dot"></div>
+        <div class="dot bg-english"></div>
         <div class="content">
             <span class="title">واجب يونيت 8 و يونيت 9 📚</span>
-            <div class="tags">
-                <span class="tag english">ENGLISH</span>
-            </div>
+            <div class="tags"><span class="tag tag-english">ENGLISH</span></div>
         </div>
-        <div class="date-box">
-            23 أبريل<br>الخميس
+        <div class="date-box bg-english">٢٣ ابريل<br>الخميس</div>
+    </div>
+
+    <div class="item" style="border: 2px solid #ce93d8;">
+        <div class="dot bg-prog"></div>
+        <div class="content">
+            <span class="title">كويز ثاني (البرمجة) 💻</span>
+            <div class="tags"><span class="tag tag-prog">PROGRAMMING</span></div>
         </div>
+        <div class="date-box bg-prog">٢٧ ابريل<br>الاثنين</div>
     </div>
 
     <div class="item">
-        <div class="dot"></div>
+        <div class="dot bg-english"></div>
         <div class="content">
-            <span class="title">كويز 4 (آخر المحاضرة) - يونيت 7 و 8</span>
-            <div class="tags">
-                <span class="tag english">ENGLISH</span>
-            </div>
+            <span class="title">كويز ٤ (آخر المحاضرة) - يونيت ٧ و ٨</span>
+            <div class="tags"><span class="tag tag-english">ENGLISH</span></div>
         </div>
-        <div class="date-box">
-            27 أبريل<br>الاثنين
+        <div class="date-box bg-english">٢٧ ابريل<br>الاثنين</div>
+    </div>
+
+    <div class="item">
+        <div class="dot bg-english"></div>
+        <div class="content">
+            <span class="title">كويز ٥ (آخر المحاضرة) - يونيت ٩ و ١٠</span>
+            <div class="tags"><span class="tag tag-english">ENGLISH</span></div>
         </div>
+        <div class="date-box bg-english">٢٩ ابريل<br>الاربعاء</div>
+    </div>
+
+    <div class="item">
+        <div class="dot bg-english"></div>
+        <div class="content">
+            <span class="title">واجب يونيت ١٠ 🖋️</span>
+            <div class="tags"><span class="tag tag-english">ENGLISH</span></div>
+        </div>
+        <div class="date-box bg-english">٣٠ ابريل<br>الخميس</div>
+    </div>
+
+    <div class="item" style="border: 2px solid #ffcc80;">
+        <div class="dot bg-math"></div>
+        <div class="content">
+            <span class="title">حل واجب الرياضيات (آخر موعد) 🔢</span>
+            <div class="tags"><span class="tag tag-math">MATH</span></div>
+        </div>
+        <div class="date-box bg-math">٣٠ ابريل<br>الخميس</div>
+    </div>
+
+    <div class="item">
+        <div class="dot bg-english"></div>
+        <div class="content">
+            <span class="title">اختبار التعبير + كويز ٦ (يونيت ١١ و ١٢)</span>
+            <div class="tags"><span class="tag tag-english">ENGLISH</span></div>
+        </div>
+        <div class="date-box bg-english">٣ مايو<br>الاحد</div>
+    </div>
+
+    <div class="item">
+        <div class="dot bg-english"></div>
+        <div class="content">
+            <span class="title">اختبار التحدث 🗣️</span>
+            <div class="tags"><span class="tag tag-english">ENGLISH</span></div>
+        </div>
+        <div class="date-box bg-english">٤ مايو<br>الاثنين</div>
+    </div>
+
+    <div class="item">
+        <div class="dot bg-english"></div>
+        <div class="content">
+            <span class="title">الاختبار النصفي الثاني (٥:٠٠ - ٧:٠٠ مساءً)</span>
+            <div class="tags"><span class="tag tag-english">ENGLISH</span></div>
+        </div>
+        <div class="date-box bg-english">٥ مايو<br>الثلاثاء</div>
+    </div>
+
+    <div class="item" style="border: 2px solid #ffcc80;">
+        <div class="dot bg-math"></div>
+        <div class="content">
+            <span class="title">ميد الرياضيات الثاني 📉</span>
+            <div class="tags"><span class="tag tag-math">MATH</span></div>
+        </div>
+        <div class="date-box bg-math">٧ مايو<br>الخميس</div>
     </div>
 
 </div>
